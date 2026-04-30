@@ -1,13 +1,15 @@
 import React from 'react'
 
-export default function Article({post}) {
+const defaultDate = "January 1, 1970";
+export default function Article({title, date, preview}) {
+    
   return (
     <div>
-     <article key = {post.id}>
-    <h3>{post.title}</h3>
-    <small>{post.date}</small>
-    <p>{post.preview}</p>
-    <p>{post.minutes} </p>
+     <article>
+    <h3>{title}</h3>
+    <small>{date || defaultDate}</small>
+    <p>{preview}</p>
+ 
     </article>
     </div>
   )

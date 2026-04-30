@@ -1,10 +1,14 @@
 import React from 'react'
 
-export default function About({data}) {
+const defaultImage = "https://via.placeholder.com/215";
+
+export default function About({image,about}) {
+
+
   return (
     <aside>
-      <img src={data.image} alt="blo logo" />
-      <p>{data.about}</p>
+      <img src={image || defaultImage} alt="blog logo" />
+      <p>{about}</p>
     </aside>
   )
 }
